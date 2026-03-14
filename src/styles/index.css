@@ -1,1 +1,2 @@
-/* Component styles are added per component. */
+@import "./tokens.css";
+@import "./base.css";

@@ -1,0 +1,112 @@
+/*
+ * Design tokens. Every component reads these variables, so a theme is
+ * just a different set of values. Light is the default; dark applies when
+ * the user prefers it, unless a page forces a theme with data-theme.
+ */
+:root {
+  --uk-font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --uk-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --uk-space-1: 0.25rem;
+  --uk-space-2: 0.5rem;
+  --uk-space-3: 0.75rem;
+  --uk-space-4: 1rem;
+  --uk-space-5: 1.5rem;
+  --uk-space-6: 2rem;
+
+  --uk-radius-sm: 4px;
+  --uk-radius-md: 6px;
+  --uk-radius-lg: 10px;
+  --uk-radius-full: 999px;
+
+  --uk-text-sm: 0.875rem;
+  --uk-text-md: 1rem;
+  --uk-text-lg: 1.125rem;
+
+  --uk-duration: 150ms;
+  --uk-z-overlay: 1000;
+  --uk-z-toast: 1100;
+  --uk-z-tooltip: 1200;
+
+  /* Light theme colours */
+  --uk-color-bg: #ffffff;
+  --uk-color-surface: #f6f7f9;
+  --uk-color-surface-raised: #ffffff;
+  --uk-color-text: #16181d;
+  --uk-color-text-muted: #545b68;
+  --uk-color-border: #c9ced6;
+  --uk-color-border-strong: #6b7280;
+  --uk-color-primary: #2952cc;
+  --uk-color-primary-hover: #1f40a3;
+  --uk-color-on-primary: #ffffff;
+  --uk-color-danger: #b42318;
+  --uk-color-danger-hover: #912018;
+  --uk-color-on-danger: #ffffff;
+  --uk-color-success: #146c43;
+  --uk-color-focus: #2952cc;
+  --uk-color-overlay: rgb(15 18 25 / 0.55);
+  --uk-color-tooltip-bg: #16181d;
+  --uk-color-tooltip-text: #ffffff;
+  --uk-shadow-md: 0 4px 12px rgb(15 18 25 / 0.12);
+  --uk-shadow-lg: 0 12px 32px rgb(15 18 25 / 0.2);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --uk-color-bg: #111318;
+    --uk-color-surface: #1a1d24;
+    --uk-color-surface-raised: #22262f;
+    --uk-color-text: #eceef2;
+    --uk-color-text-muted: #a8afbd;
+    --uk-color-border: #3a404c;
+    --uk-color-border-strong: #8b93a3;
+    --uk-color-primary: #8aa8ff;
+    --uk-color-primary-hover: #a9bfff;
+    --uk-color-on-primary: #0d1430;
+    --uk-color-danger: #ff8a80;
+    --uk-color-danger-hover: #ffaba3;
+    --uk-color-on-danger: #2b0805;
+    --uk-color-success: #6fd3a0;
+    --uk-color-focus: #8aa8ff;
+    --uk-color-overlay: rgb(0 0 0 / 0.65);
+    --uk-color-tooltip-bg: #eceef2;
+    --uk-color-tooltip-text: #111318;
+    --uk-shadow-md: 0 4px 12px rgb(0 0 0 / 0.4);
+    --uk-shadow-lg: 0 12px 32px rgb(0 0 0 / 0.55);
+
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --uk-color-bg: #111318;
+  --uk-color-surface: #1a1d24;
+  --uk-color-surface-raised: #22262f;
+  --uk-color-text: #eceef2;
+  --uk-color-text-muted: #a8afbd;
+  --uk-color-border: #3a404c;
+  --uk-color-border-strong: #8b93a3;
+  --uk-color-primary: #8aa8ff;
+  --uk-color-primary-hover: #a9bfff;
+  --uk-color-on-primary: #0d1430;
+  --uk-color-danger: #ff8a80;
+  --uk-color-danger-hover: #ffaba3;
+  --uk-color-on-danger: #2b0805;
+  --uk-color-success: #6fd3a0;
+  --uk-color-focus: #8aa8ff;
+  --uk-color-overlay: rgb(0 0 0 / 0.65);
+  --uk-color-tooltip-bg: #eceef2;
+  --uk-color-tooltip-text: #111318;
+  --uk-shadow-md: 0 4px 12px rgb(0 0 0 / 0.4);
+  --uk-shadow-lg: 0 12px 32px rgb(0 0 0 / 0.55);
+
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --uk-duration: 0ms;
+  }
+}
