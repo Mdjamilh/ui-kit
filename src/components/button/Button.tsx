@@ -59,7 +59,7 @@ export function Button({
     >
       {loading && <span className="uk-spinner" aria-hidden="true" />}
       <span className="uk-button__label">{children}</span>
-      {loading && <span className="uk-visually-hidden">{loadingLabel}</span>}
+      {loading && <span className="uk-visually-hidden">{`, ${loadingLabel}`}</span>}
     </button>
   );
 }
