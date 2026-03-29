@@ -7,3 +7,4 @@ export * from "./components/checkbox";
 export * from "./components/switch";
 export * from "./components/tabs";
 export * from "./components/dialog";
+export * from "./components/tooltip";
