@@ -2,6 +2,8 @@ import { cloneElement, isValidElement, useEffect, useId, useRef, useState } from
 import type { ReactElement, ReactNode } from "react";
 import { cx } from "../../utils/cx";
 
+const HIDE_GRACE_MS = 100;
+
 export interface TooltipProps {
   /** Short text describing the trigger. Do not put interactive content in a tooltip. */
   content: ReactNode;
@@ -31,13 +33,19 @@ export function Tooltip({ content, children, placement = "top", delay = 300, cla
 
   function show(immediate: boolean) {
     clearTimer();
-    if (immediate || delay <= 0) setOpen(true);
+    if (open || immediate || delay <= 0) setOpen(true);
     else timer.current = setTimeout(() => setOpen(true), delay);
   }
 
   function hide() {
     clearTimer();
     setOpen(false);
+  }
+
+  /** Pointer leave waits briefly so the pointer can cross the gap onto the bubble. */
+  function hideSoon() {
+    clearTimer();
+    timer.current = setTimeout(() => setOpen(false), HIDE_GRACE_MS);
   }
 
   useEffect(() => clearTimer, []);
@@ -61,7 +69,7 @@ export function Tooltip({ content, children, placement = "top", delay = 300, cla
     <span
       className={cx("uk-tooltip", className)}
       onPointerEnter={() => show(false)}
-      onPointerLeave={hide}
+      onPointerLeave={hideSoon}
       onFocus={() => show(true)}
       onBlur={hide}
     >
