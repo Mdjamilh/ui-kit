@@ -9,3 +9,4 @@ export * from "./components/tabs";
 export * from "./components/dialog";
 export * from "./components/tooltip";
 export * from "./components/toast";
+export * from "./components/select";
