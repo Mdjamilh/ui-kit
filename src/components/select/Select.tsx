@@ -90,6 +90,7 @@ export function Select({
   function close() {
     setOpen(false);
     setActive(-1);
+    typeahead.current = { text: "", time: 0 };
   }
 
   function choose(index: number) {
