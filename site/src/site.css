@@ -196,3 +196,102 @@ a:focus-visible,
     padding: var(--uk-space-4);
   }
 }
+
+.docs-example {
+  margin: var(--uk-space-4) 0;
+  border: 1px solid var(--uk-color-border);
+  border-radius: var(--uk-radius-lg);
+}
+
+.docs-example__preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--uk-space-3);
+  padding: var(--uk-space-5);
+}
+
+.docs-example__preview > .uk-field,
+.docs-example__preview > .uk-select,
+.docs-example__preview > .uk-tabs,
+.docs-example__preview > .docs-stack {
+  flex: 1 1 100%;
+}
+
+.docs-example__source {
+  border-top: 1px solid var(--uk-color-border);
+}
+
+.docs-example__source summary {
+  padding: var(--uk-space-2) var(--uk-space-4);
+  cursor: pointer;
+  color: var(--uk-color-text-muted);
+  font-size: var(--uk-text-sm);
+  font-weight: 600;
+}
+
+.docs-example__source summary:focus-visible {
+  outline: 2px solid var(--uk-color-focus);
+  outline-offset: -2px;
+}
+
+.docs-example__source .docs-code {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--uk-color-border);
+  border-radius: 0 0 var(--uk-radius-lg) var(--uk-radius-lg);
+}
+
+.docs-stack {
+  display: grid;
+  gap: var(--uk-space-3);
+  max-width: 24rem;
+}
+
+.docs-table-wrap {
+  margin: var(--uk-space-4) 0;
+  overflow-x: auto;
+}
+
+.docs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--uk-text-sm);
+}
+
+.docs-table caption {
+  margin-bottom: var(--uk-space-2);
+  text-align: left;
+  font-weight: 700;
+  font-size: var(--uk-text-md);
+}
+
+.docs-table th,
+.docs-table td {
+  padding: var(--uk-space-2) var(--uk-space-3);
+  border-bottom: 1px solid var(--uk-color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.docs-table thead th {
+  color: var(--uk-color-text-muted);
+}
+
+.docs-table tbody th {
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: 0.05em 0.4em;
+  border: 1px solid var(--uk-color-border-strong);
+  border-bottom-width: 2px;
+  border-radius: var(--uk-radius-sm);
+  background: var(--uk-color-surface-raised);
+  font-family: var(--uk-font-mono);
+  font-size: 0.85em;
+  text-align: center;
+}
