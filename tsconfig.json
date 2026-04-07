@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
@@ -15,7 +19,20 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "types": ["node"]
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@mdjamilh/ui-kit": [
+        "./src/index.ts"
+      ]
+    }
   },
-  "include": ["src", "site", "e2e", "*.config.ts", "scripts"]
+  "include": [
+    "src",
+    "site",
+    "e2e",
+    "*.config.ts",
+    "scripts"
+  ]
 }
