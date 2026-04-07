@@ -38,7 +38,8 @@
     "typecheck": "tsc -p tsconfig.json",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check:treeshake": "node scripts/check-treeshake.mjs"
   },
   "peerDependencies": {
     "react": ">=19",
@@ -53,6 +54,7 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "axe-core": "4.13.0",
+    "esbuild": "0.28.2",
     "eslint": "9.39.5",
     "eslint-plugin-react-hooks": "5.2.0",
     "globals": "16.5.0",
@@ -63,5 +65,8 @@
     "typescript": "5.8.3",
     "typescript-eslint": "8.72.0",
     "vitest": "5.0.3"
+  },
+  "overrides": {
+    "esbuild": "0.28.2"
   }
 }
