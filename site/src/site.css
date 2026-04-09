@@ -295,3 +295,15 @@ kbd {
   font-size: 0.85em;
   text-align: center;
 }
+
+.docs-fieldset {
+  margin: 0;
+  padding: var(--uk-space-3) var(--uk-space-4);
+  border: 1px solid var(--uk-color-border);
+  border-radius: var(--uk-radius-md);
+}
+
+.docs-fieldset legend {
+  padding: 0 var(--uk-space-1);
+  font-weight: 600;
+}
