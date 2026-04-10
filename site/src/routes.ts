@@ -5,6 +5,7 @@ import { DialogPage } from "./pages/DialogPage";
 import { Home } from "./pages/Home";
 import { TabsPage } from "./pages/TabsPage";
 import { TextFieldPage } from "./pages/TextFieldPage";
+import { TooltipPage } from "./pages/TooltipPage";
 
 export interface DocRoute {
   path: string;
@@ -19,4 +20,5 @@ export const routes: DocRoute[] = [
   { path: "checkbox-switch", label: "Checkbox and Switch", Component: CheckboxPage },
   { path: "tabs", label: "Tabs", Component: TabsPage },
   { path: "dialog", label: "Dialog", Component: DialogPage },
+  { path: "tooltip", label: "Tooltip", Component: TooltipPage },
 ];
