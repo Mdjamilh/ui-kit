@@ -3,6 +3,7 @@ import { ButtonPage } from "./pages/ButtonPage";
 import { CheckboxPage } from "./pages/CheckboxPage";
 import { DialogPage } from "./pages/DialogPage";
 import { Home } from "./pages/Home";
+import { SelectPage } from "./pages/SelectPage";
 import { TabsPage } from "./pages/TabsPage";
 import { TextFieldPage } from "./pages/TextFieldPage";
 import { ToastPage } from "./pages/ToastPage";
@@ -23,4 +24,5 @@ export const routes: DocRoute[] = [
   { path: "dialog", label: "Dialog", Component: DialogPage },
   { path: "tooltip", label: "Tooltip", Component: TooltipPage },
   { path: "toast", label: "Toast", Component: ToastPage },
+  { path: "select", label: "Select", Component: SelectPage },
 ];
