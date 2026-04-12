@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import { SelectPage } from "./pages/SelectPage";
 import { TabsPage } from "./pages/TabsPage";
 import { TextFieldPage } from "./pages/TextFieldPage";
+import { ThemingPage } from "./pages/ThemingPage";
 import { ToastPage } from "./pages/ToastPage";
 import { TooltipPage } from "./pages/TooltipPage";
 
@@ -25,4 +26,5 @@ export const routes: DocRoute[] = [
   { path: "tooltip", label: "Tooltip", Component: TooltipPage },
   { path: "toast", label: "Toast", Component: ToastPage },
   { path: "select", label: "Select", Component: SelectPage },
+  { path: "theming", label: "Theming", Component: ThemingPage },
 ];

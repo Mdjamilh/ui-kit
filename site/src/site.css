@@ -307,3 +307,19 @@ kbd {
   padding: 0 var(--uk-space-1);
   font-weight: 600;
 }
+
+.docs-swatch {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--uk-color-border-strong);
+  border-radius: var(--uk-radius-sm);
+  vertical-align: middle;
+}
+
+.docs-brand-green {
+  --uk-color-primary: #116b4a;
+  --uk-color-primary-hover: #0b5137;
+  --uk-color-focus: #116b4a;
+  --uk-radius-md: 999px;
+}
