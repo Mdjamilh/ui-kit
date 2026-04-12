@@ -5,6 +5,7 @@ import { DialogPage } from "./pages/DialogPage";
 import { Home } from "./pages/Home";
 import { TabsPage } from "./pages/TabsPage";
 import { TextFieldPage } from "./pages/TextFieldPage";
+import { ToastPage } from "./pages/ToastPage";
 import { TooltipPage } from "./pages/TooltipPage";
 
 export interface DocRoute {
@@ -21,4 +22,5 @@ export const routes: DocRoute[] = [
   { path: "tabs", label: "Tabs", Component: TabsPage },
   { path: "dialog", label: "Dialog", Component: DialogPage },
   { path: "tooltip", label: "Tooltip", Component: TooltipPage },
+  { path: "toast", label: "Toast", Component: ToastPage },
 ];
