@@ -320,6 +320,7 @@ kbd {
 .docs-brand-green {
   --uk-color-primary: #116b4a;
   --uk-color-primary-hover: #0b5137;
+  --uk-color-on-primary: #ffffff;
   --uk-color-focus: #116b4a;
   --uk-radius-md: 999px;
 }

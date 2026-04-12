@@ -59,17 +59,21 @@ export function ThemingPage() {
       </div>
       <p>
         Both themes were checked for WCAG AA contrast: text tokens reach at least 4.5:1 on the background and
-        surfaces, and borders and focus rings reach 3:1. The browser tests run axe on every page in both themes.
+        surfaces, and input borders and focus rings reach 3:1. The browser tests run axe on every page in both themes.
       </p>
 
       <h2>Making your own theme</h2>
-      <p>Override tokens on any element. Components inside pick up the new values.</p>
+      <p>
+        Override tokens on any element. Components inside pick up the new values. Set the text colour that sits on
+        your new primary too: the dark theme uses dark text on its light blue, which would be unreadable on green.
+      </p>
       <Example
         title="Custom theme"
         code={`
 .brand-green {
   --uk-color-primary: #116b4a;
   --uk-color-primary-hover: #0b5137;
+  --uk-color-on-primary: #ffffff;
   --uk-color-focus: #116b4a;
   --uk-radius-md: 999px;
 }`}
