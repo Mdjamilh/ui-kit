@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import type { ReactNode } from "react";
 
+/** The first page shown should not steal focus; later navigations should move it. */
+let lastTitle: string | null = null;
+
 interface PageProps {
   title: string;
   lead?: ReactNode;
@@ -16,7 +19,8 @@ export function Page({ title, lead, children }: PageProps) {
 
   useEffect(() => {
     document.title = title === "ui-kit" ? "ui-kit: accessible React components" : `${title} | ui-kit`;
-    if (window.location.hash) headingRef.current?.focus();
+    if (lastTitle !== null && lastTitle !== title) headingRef.current?.focus();
+    lastTitle = title;
   }, [title]);
 
   return (
