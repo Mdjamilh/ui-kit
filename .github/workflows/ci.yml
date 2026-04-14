@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Lint, types, unit tests and builds
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - name: Build the library
+        run: npm run build
+      - name: Check that unused components are tree-shaken
+        run: npm run check:treeshake
+      - name: Build the docs site
+        run: npm run build:site
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
+
+  e2e:
+    name: Browser tests (axe and dialog focus)
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.55.1-noble
+    env:
+      HOME: /root
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npx playwright test
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report
+          retention-days: 7
